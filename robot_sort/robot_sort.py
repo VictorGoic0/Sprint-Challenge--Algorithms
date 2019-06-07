@@ -115,7 +115,6 @@ class SortingRobot:
 
             while self.can_move_left():
                 self.move_left()
-            self.move_right()
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
