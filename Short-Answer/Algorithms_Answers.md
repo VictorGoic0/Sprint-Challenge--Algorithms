@@ -1,1 +1,11 @@
 Add your answers to the Algorithms exercises here.
+
+## Exercise I
+
+a) This problem seems to a while loop which runs as long as a is less than n to the power of 3. A is also incrementing up by n to the power of 2. So for example, if n is 8, the loop will increment from 0 to 4, then to 8, which is 2 to the third. This is 2 operations for a value n of 2. So the time complexity is O(n). The space complexity should be O(1), as it is only allocating memory to the a variable.
+
+b) This problem has 4 for loops, all nested within one another. The first time runs from 0 to n. So the minimum runtime is already O(n). The loop nested inside runs from the i index + 1 all the way to n. So the first iteration runs from 1 to n, the second from 2 to n, and so on. Since it isn't running the full length of n every time, it isn't quite O(n^2) yet but it is close. The next loop runs with every iteration of the previous loop, starting from j+1, which starts at i+1, and going to n. So the first index is 2, and it goes up by 1 each time. We are probably well into O(n^2) territory now since these loops are nested. The final loop does the same, starting from k + 1, which starts at j+1, which starts at i+1. So this final loop starts at 3, and runs 10 times for each iteration of the previous loop. The runtime is somewhere around O(n^3). Full for loop (n) * for loop which runs at length n-1 decreasing by 1 with each iteration of the previous loop * for loop which runs at length n-2 decreasing by with each iteration of previous * for loop which runs exactly 10 times with each iteration of previous loop. So I suppose it's n * nlogn * nlogn * 10. Dropping the coefficients this should resolve to just O(nlogn). The space complexity should be O(1), as it is only allocating memory to a handful of integer variables.
+
+c) This problem starts at input n and runs recursively, calling itself one time per recursive call and decrementing n by 1, all the way down to 0. So this should resolve to O(n) time complexity, and O(n) space complexity.
+
+## Exercise 2
